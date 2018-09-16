@@ -1,5 +1,4 @@
 module.exports = {
-	admins: ['76561198089553444'],
 	rates: {
 		tf2SellPrice: 1.50, // Users sell their TF2 keys for this price
 		vgoSellPrice: 2.30, // Users sell their VGO keys for this price
