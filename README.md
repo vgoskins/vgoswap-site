@@ -1,6 +1,6 @@
 # vgoswap-site
 
-vgoswap-site is the source code for the popular key exchange site 'VGOSwap.net'.
+vgoswap-site is the source code for the popular key exchange site VGOSwap.net.
 
 ### Setup
 
