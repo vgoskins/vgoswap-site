@@ -1,0 +1,14 @@
+<div id="chat" class="z-depth-5">
+	<div class="chatTop z-depth-1 blue accent-2 white-text" onclick="closeChat()">
+		<a class="chatCloseBtn white-text"><i class="fas fa-times"></i></a><span class="en">Chat</span><span class="zh hidden">聊天</span>
+	</div>
+	<div class="chatContain">
+		{{> pageloader}}
+	</div>
+	<div class="chatBottom">
+		<div class="input-field">
+			<input placeholder="Say something!" id="chatInput" type="text" class="validate" maxlength="250">
+		</div>
+	</div>
+</div>
+<a onclick="openChat()" class="btn-floating btn-large pulse waves-effect waves-light blue accent-2 z-depth-3" id="chatBtn"><i class="material-icons">chat</i></a>

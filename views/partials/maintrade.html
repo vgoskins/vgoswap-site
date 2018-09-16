@@ -1,0 +1,110 @@
+<div ng-app="app" ng-controller="ctrl" id="mainTrade" class="mainTrade container">
+	<div class="row">
+		<div class="col l6 m12 s12 sellSection">
+			<div class="row">
+				<div class="col s10 offset-s1 center-align buySellTitle">
+					<div class="en">SELL</div> 
+					<div class="zh hidden">卖</div>
+					<div><i class="fas fa-chevron-down" style="font-size: 30px;"></i></div>
+				</div>
+				<div class="col l5 m5 s6 offset-l1 offset-m1">
+					<div class="keyBox z-depth-1 hoverable grey lighten-5">
+						<div class="topKeyBox">
+							<div class="keyPrice" style="position: absolute; top: 10px;">
+								<span class="badge indigo lighten-4 black-text z-depth-1">${{getFixed config.rates.tf2SellPrice}}</span> 
+							</div> 
+							<img style="width: 100%" src="/public/img/tf2key.png"> 
+						</div>
+						<div class="row">
+							<div class="input-field col s6 offset-s3">
+								<input ng-model="tf2SellAmount" placeholder="Amount" id="tf2SellAmount" type="number" min="1" max="50" class="validate" autocomplete="off">
+								<label for="tf2SellAmount"><span class="en">Amount</span><span class="zh">数量</span></label>
+							</div>
+							<div class="col s12 center-align"> 
+								<a class="btn blue accent-2" disabled ng-disabled="!tf2SellAmount" id="tf2SellBtn"><span class="en">Sell</span><span class="zh hidden">卖</span> <span ng-hide="!tf2SellAmount" ng-bind="tf2SellAmount * prices.tf2SellPrice | currency" id="tf2SellTotalAmount"></span>
+								</a> 
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col l5 m5 s6">
+					<div class="keyBox grey lighten-5 z-depth-1 hoverable">
+						<div class="topKeyBox">
+							<div class="keyPrice" style="position: absolute; top: 10px;">
+								<span class="badge indigo lighten-4 black-text z-depth-1">${{getFixed config.rates.vgoSellPrice}}</span> 
+							</div>
+							<img style="width: 100%" src="/public/img/vgokey.png"> 
+						</div>
+						<div class="row">
+							<div class="input-field col s6 offset-s3">
+								<input ng-model="vgoSellAmount" placeholder="Amount" id="vgoSellAmount" type="number" min="1" max="200" class="validate" autocomplete="off">
+								<label for="vgoSellAmount"><span class="en">Amount</span><span class="zh">数量</span></label>
+							</div>
+							<div class="col s12 center-align"> 
+								<a class="btn blue accent-2" disabled ng-disabled="!vgoSellAmount" id="vgoSellBtn"><span class="en">Sell</span><span class="zh hidden">卖</span> <span ng-hide="!vgoSellAmount" ng-bind="vgoSellAmount * prices.vgoSellPrice | currency" id="vgoSellTotalAmount"></span>
+								</a>  
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col l6 m12 s12 buySection">
+			<div class="row">
+				<div class="col s10 offset-s1 center-align buySellTitle">
+					<div class="en">BUY</div> 
+					<div class="zh hidden">买</div> 
+					<div><i class="fas fa-chevron-down" style="font-size: 30px;"></i></div>
+				</div>
+				<div class="col l5 m5 s6 offset-l1 offset-m1">
+					<div class="keyBox z-depth-1 hoverable grey lighten-5">
+						<div class="topKeyBox">
+							<div class="keyPrice" style="position: absolute; top: 10px;">
+								<span class="badge indigo lighten-4 black-text z-depth-1">${{getFixed config.rates.tf2BuyPrice}}</span> 
+							</div> 
+							<img style="width: 100%" src="/public/img/tf2key.png"> 
+							<div class="inStock right-align" style="position: absolute; bottom: 20px; right: 15px">
+								x<span class="tf2KeysInStock">{{tf2KeysInStock}}</span>
+								<div class="inStockText"><span class="en">in stock</span><span class="zh">钥匙现货</span></div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s6 offset-s3">
+								<input ng-model="tf2BuyAmount" placeholder="Amount" id="tf2BuyAmount" type="number" min="1" max="50" class="validate" autocomplete="off">
+								<label for="tf2BuyAmount"><span class="en">Amount</span><span class="zh">数量</span></label>
+							</div>
+							<div class="col s12 center-align"> 
+								<a class="btn blue accent-2" disabled ng-disabled="!tf2BuyAmount" id="tf2BuyBtn"><span class="en">Buy</span><span class="zh hidden">买</span> <span ng-hide="!tf2BuyAmount" ng-bind="tf2BuyAmount * prices.tf2BuyPrice | currency" id="tf2BuyTotalAmount"></span>
+								</a>  
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col l5 m5 s6">
+					<div class="keyBox z-depth-1 hoverable grey lighten-5">
+						<div class="topKeyBox">
+							<div class="keyPrice" style="position: absolute; top: 10px;">
+								<span class="badge indigo lighten-4 black-text z-depth-1">${{getFixed config.rates.vgoBuyPrice}}</span> 
+							</div>
+							<img style="width: 100%" src="/public/img/vgokey.png">
+							<div class="inStock right-align" style="position: absolute; bottom: 20px; right: 15px">
+								x<span class="vgoKeysInStock">{{vgoKeysInStock}}</span>
+								<div class="inStockText"><span class="en">in stock</span><span class="zh">钥匙现货</span></div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s6 offset-s3">
+								<input ng-model="vgoBuyAmount" placeholder="Amount" id="vgoBuyAmount" type="number" min="1" max="200" class="validate" autocomplete="off">
+								<label for="vgoBuyAmount"><span class="en">Amount</span><span class="zh">数量</span></label>
+							</div>
+							<div class="col s12 center-align"> 
+								<a class="btn blue accent-2" disabled ng-disabled="!vgoBuyAmount" id="vgoBuyBtn"><span class="en">Buy</span><span class="zh hidden">买</span> <span ng-hide="!vgoBuyAmount" ng-bind="vgoBuyAmount * prices.vgoBuyPrice | currency" id="vgoBuyTotalAmount"></span>
+								</a>  
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

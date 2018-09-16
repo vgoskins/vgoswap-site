@@ -1,0 +1,38 @@
+<div class="mainIntro">
+	<div class="container">
+		<div class="row valign-wrapper hide-on-med-and-down">
+			<div class="col s5 pull-s1 center-align">
+				<h3 class="mainIntroText"><span class="en">Exchange VGO & TF2 Keys - Instantly!</span><span class="zh hidden">交换 VGO和TF2 钥匙 - 即刻！</span></h3>
+				{{#unless user}}
+				<a href="/auth/steam" class="btn white black-text z-depth-2 waves-effect waves-dark"><img class="steamLoginBtnImg left" src="/public/img/steamlogo.png"><span class="en">Sign in through Steam</span><span class="zh hidden">通过 STEAM 登录</span></a>
+				{{/unless}}
+			</div>
+			<div class="col s5 offset-s1 center-align"> <img class="mainIntroImg" src="/public/img/keyswaplight.png"> </div>
+		</div>
+		<div class="row hide-on-large-only">
+			<div class="col s8 offset-s2 center-align"> <img class="mainIntroImg" src="/public/img/keyswaplight.png"> </div>
+			<div class="col s12 center-align">
+				<h3 class="mainIntroText"><span class="en">Exchange VGO & TF2 Keys - Instantly!</span><span class="zh hidden">交换 VGO和TF2 钥匙 - 即刻！</span></h3>
+				{{#unless user}}
+				<a href="/auth/steam" class="btn white black-text z-depth-2"><img class="steamLoginBtnImg left" src="/public/img/steamlogo.png"><span class="en">Sign in through Steam</span><span class="zh hidden">通过 STEAM 登录</span></a>
+				{{/unless}}
+			</div>
+		</div>
+		<div class="center-align"><a id="mainScrollBtn"><i class="fas fa-chevron-down" style="font-size: 30px;"></i></a></div>
+	</div>
+</div>
+<div class="belowMainIntro z-depth-3">
+	<div class="container">
+		<div class="row center-align">
+			<div class="col s4">
+				<h5><i class="fas fa-exchange-alt"></i> {{totalTrades}}</h5>
+				<h6 class="dividerColor"><span class="en">Total Trades</span><span class="zh hidden">总交易</span></h6> </div>
+			<div class="col s4">
+				<h5><i class="fas fa-user"></i> {{totalUsers}}</h5>
+				<h6 class="dividerColor"><span class="en">Total Users</span><span class="zh hidden">总用户</span></h6> </div>
+			<div class="col s4">
+				<h5><i class="fas fa-globe"></i> <span class="online">{{online}}</span></h5>
+				<h6 class="dividerColor"><span class="en">Online Now</span><span class="zh hidden">在线用户</span></h6> </div>
+		</div>
+	</div>
+</div>

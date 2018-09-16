@@ -1,0 +1,20 @@
+<div class="row">
+	<div class="input-field col s12">
+		<input placeholder="{{#if userdata.tradeurl}}{{userdata.tradeurl}}{{else}}Steam Trade URL{{/if}}" id="steamTradeUrlInput" type="text" class="validate">
+		<label for="steamTradeUrlInput">Steam Trade URL</label>
+		<span class="helper-text"><a href="https://steamcommunity.com/my/tradeoffers/privacy#trade_offer_access_url" target="_blank">Get your Trade URL</a></span>
+	</div>
+	<div class="col s12">
+		<a class="btn blue accent-2 setTradeUrl">Update</a>
+	</div>
+</div>
+<div class="row">
+	<div class="input-field col s12">
+		<input placeholder="{{#if userdata.customsteamid}}{{userdata.customsteamid}}{{else}}SteamID64{{/if}}" id="opskinsSteamidInput" type="text" class="validate">
+		<label for="opskinsSteamidInput">SteamID</label>
+		<span class="helper-text">Use this to set a custom SteamID64 for OPSkins trades. Leave blank to use your current SteamID.<br> When using a custom Steam URL, this ID must be the same as the SteamID associated with the Trade URL.</span>
+	</div>
+	<div class="col s12">
+		<a class="btn blue accent-2 setOpskinsSteamid">Update</a>
+	</div>
+</div>

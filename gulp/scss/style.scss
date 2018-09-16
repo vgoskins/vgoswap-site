@@ -1,0 +1,287 @@
+$dark-primary: #303F9F;
+$light-primary: #3F51B5;
+$light-bg: #F4F4F4;
+
+body {
+	background-color: $light-bg;
+	font-family: Montserrat;
+}
+
+.hidden {
+	display: none;
+}
+
+.zh-btn, .zh {
+	font-family: 'SimHei', 'Hiragino Sans GB';
+}
+
+.page-footer {
+	background-color: $light-primary;
+	.footer-copyright {
+		background-color: $dark-primary !important;
+	}
+}
+
+.mainIntro {
+	background-color: $light-primary;
+	padding: 25px 0;
+	color: #FFFFFF;
+	.mainIntroImg {
+		margin: 25px 0;
+		width: 100%;
+	}
+
+	.mainIntroText {
+		margin: 0 0 30px 0;
+	}
+}
+
+.belowMainIntro {
+	background-color: $dark-primary;
+	color: #FFFFFF;
+}
+
+.secondaryText {
+	color: #757575;
+}
+
+.dividerColor {
+	color: #BDBDBD;
+}
+
+.steamLoginBtnImg {
+	height: 24px;
+	margin: 6px 10px 6px 0;
+}
+
+#mainTrade {
+	.keyBox {
+		border: 1px solid #BDBDBD
+	}
+	.mainKeyImg {
+		max-width: 200px;
+	}
+	.keyPrice {
+		font-size: 20px;
+	}
+
+	.topKeyBox {
+		width: 100%;
+		position: relative;
+	}
+	.inStockText {
+		color: #757575;
+		font-size: 10px;
+	}
+}
+
+
+.input-field label {
+	color: $dark-primary;
+}
+
+.input-field input[type=text]:focus + label,
+.input-field input[type=number]:focus + label {
+	color: $dark-primary !important;
+}
+
+.input-field input[type=text]:focus,
+.input-field input[type=number]:focus {
+	border-bottom: 1px solid $dark-primary !important;
+	box-shadow: 0 1px 0 0 $dark-primary !important;
+}
+
+.input-field input[type=text].valid,
+.input-field input[type=number].valid {
+	border-bottom: 1px solid #9e9e9e !important;
+	box-shadow: none !important;
+}
+
+.input-field input[type=text].invalid,
+.input-field input[type=number].valid {
+	border-bottom: 1px solid #9e9e9e !important;
+	box-shadow: none !important;
+}
+
+.brand-logo {
+	cursor: pointer;
+}
+
+#toast-container {
+	z-index: 2000 !important;
+	top: auto !important;
+	right: auto !important;
+	bottom: 25px;
+	left: 25px;
+}
+
+.navBalanceContain {
+	background-color: white;
+	color: black;
+	padding: 5px 10px;
+	border-radius: 4px;
+	margin-right: 10px;
+}
+
+.pageLoadPreloader {
+	display: block;
+	margin: 30px auto;
+}
+
+.modalFeedbackIcon {
+	font-size: 80px;
+}
+
+.buySellTitle {
+	font-size: 40px;
+	margin-bottom: 10px;
+}
+
+#mainScrollBtn {
+	cursor: pointer;
+	color: white;
+}
+
+.opskinsSvg {
+	height: 40px;
+	margin: 7px 15px 0 0;
+}
+
+
+// CHAT
+#chat {
+	height: 0;
+	display: none;
+	width: 250px;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	background-color: $light-bg;
+	z-index: 2;
+	transition: 0.3s;
+	border-radius: 10px 10px 0 0;
+	overflow: hidden;
+	.chatTop {
+		height: 40px;
+		line-height: 40px;
+		padding: 0 10px;
+		cursor: pointer;
+		z-index: 2;
+		.chatCloseBtn {
+			color: black;
+			margin-right: 5px;
+			cursor: pointer;
+		}
+	}
+	
+	.chatContain {
+		height: calc(100% - 124px);
+		padding: 5px;
+		overflow: auto;
+		.avatar {
+			border-radius: 100%;
+		}
+
+		.chatAvatar {
+			height: 30px;
+		}
+
+		.chatName {
+			line-height: 30px;
+			margin-left: 38px;
+			width: 40%;
+		}
+
+		.chatTime {
+			color: #757575;
+			font-size: 10px;
+		}
+
+		.chatDivider {
+			margin: 5px 0;
+		}
+
+		.chatMessage {
+			margin-top: 10px;
+			position: relative;
+			padding: 5px;
+		}
+	}
+	
+	.chatBottom {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		margin: 0;
+		padding: 0 10px;
+		width: 100%;
+		background-color: white;
+	}
+}
+#chatBtn {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+}
+// END CHAT
+
+.modalOpskinsLogo {
+	height: 60px;
+}
+
+.chatUserLink {
+	color: black;
+}
+
+.devText {
+	color: red;
+}
+
+.contact,
+.faq,
+.terms,
+.privacy {
+	cursor: pointer;
+}
+
+#loader {
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient( to bottom right, $light-primary, #d8dfff);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1100;
+	text-align: center;
+	.loaderLogo {
+		height: 85px;
+		-webkit-animation: rotating 1s ease-in-out infinite;
+		-moz-animation: rotating 1s ease-in-out infinite;
+		-ms-animation: rotating 1s ease-in-out infinite;
+		-o-animation: rotating 1s ease-in-out infinite;
+		animation: rotating 1s ease-in-out infinite;
+	}
+
+	.loaderLoader {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+@keyframes rotating {
+	from {
+		-ms-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	to {
+		-ms-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+

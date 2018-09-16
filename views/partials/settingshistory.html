@@ -1,0 +1,31 @@
+<div class="row">
+	<div class="col s12">
+		{{#if stuff}}
+		<table>
+			<thead>
+				<tr>
+						<th>Game</th>
+						<th>Type</th>
+						<th>Total</th>
+						<th>ID</th>
+						<th>Date</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				{{#each stuff}}
+				<tr>
+					<td>{{game}}</td>
+					<td>{{type}}</td>
+					<td>${{total}}</td>
+					<td>{{id}}</td>
+					<td>{{date}}</td>
+				</tr>
+				{{/each}}
+			</tbody>
+		</table>
+		{{else}}
+		<h5>You have not yet made any trades!</h5>
+		{{/if}}
+	</div>
+</div>
