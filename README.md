@@ -52,7 +52,7 @@ Import the database from the sql folder. Your schema should be named the same th
 #### Run the site
 Use CMD/Terminal to go to the site's root directory:
 ```bash
-$ cd /Users/Desktop/vgoswap-site
+$ cd /Users/Almatrass/Desktop/vgoswap-site
 ```
 Install modules:
 ```bash
