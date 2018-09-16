@@ -45,14 +45,16 @@ This object is fairly self-explanatory, you can reference this video to get your
 I'll explain how to setup the database further down, but you should name the schema `vgoswap`. Make sure the password is your mysql database password. The `host`, `user` and `port` values are fairly standard so don't change them unless you've customised your database settings.
 
 #### Database setup
-You need to have a MYSQL database running on your machine. I recommend using MYSQL Workbench also, which you can find here: https://www.mysql.com/products/workbench/
+You need to have a MYSQL database running on your machine. I recommend using MYSQL Workbench also.
 
-Import the database from the sql folder. Your schema should be named the same thing as you set in config.
+MYSQL noobies can find some help here: https://www.youtube.com/watch?v=aY6LiTbfckA
+
+Import the database file from the sql folder. Your schema should be named the same thing as you set in config.
 
 #### Run the site
 Use CMD/Terminal to go to the site's root directory:
 ```bash
-$ cd /Users/Almatrass/Desktop/vgoswap-site
+$ cd /Users/Almatrass/Desktop/vgoswap-site-master
 ```
 Install modules:
 ```bash
