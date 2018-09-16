@@ -7,7 +7,7 @@
     "start": "node ./server/vgoswap-server.js"
   },
   "author": "Almatrass",
-  "license": "MIT",
+  "license": "Attribution 4.0 International",
   "dependencies": {
     "cookie-parser": "^1.4.3",
     "express": "^4.16.3",
