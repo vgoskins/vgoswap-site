@@ -119,7 +119,7 @@ function updateInventory() {
 
 module.exports = {
 	init: function () {
-//		client.logOn(logOnOptions);
+		client.logOn(logOnOptions);
 	},
 	getKeysInVgoInventory: function(steamid, cb) {
 		ET.ITrade.GetUserInventoryFromSteamId({steam_id: steamid, app_id: 1, search: 'Skeleton Key'}, (err, body) => {
