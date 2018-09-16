@@ -1315,7 +1315,7 @@ function checkTf2Offers() {
 							let keys = failedOffer.itemsToGive.length;
 							let value = failedOffer.itemsToGive.length * config.rates.tf2BuyPrice;
 							console.log(`[CANCELLED BUY] ${realSteamid} - ${keys} TF2 - $${value}`);
-							emitAlertToClient(realSteamid, `TF2 Sell offer cancelled`);
+							emitAlertToClient(realSteamid, `TF2 Buy offer cancelled`);
 
 							// For a failed buy offer, we must refund the user, delete
 							// the offer, and restore the keys in stock.
