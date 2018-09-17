@@ -8,8 +8,12 @@
 			<ul id='mobile-nav' class='dropdown-content'>
 				<li><a class="settings black-text"><i class="material-icons">settings</i> Settings</a></li>
 				<li class="divider" tabindex="-1"></li>
+        <li class="zh-btn-contain"><a class="zh-btn black-text"><i class="material-icons left">language</i><br> 中文</a></li>
+				<li class="en-btn-contain hidden"><a class="en-btn black-text"><i class="material-icons left">language</i><br> English</a></li>
+        <li class="divider" tabindex="-1"></li>
 				{{#if user}}
 				<li><a href="/logout" class="black-text"><i class="material-icons left" style="margin-right: 5px">power_settings_new</i> <span class="en">Logout</span><span class="zh hidden">登出</span></a></li>
+        <li><span class="black-text left">Balance: $<span class="balance">??</span></span></li>
 				{{else}}
 				<li><a href="/auth/steam" class="black-text"><i class="fab fa-steam-symbol"></i> <span class="en">Login</span><span class="zh hidden">登录</span></a></li>
 				{{/if}}
@@ -17,7 +21,6 @@
 			
 			
 			<ul class="right hide-on-med-and-down">
-<!--				<li><a class="btn blue accent-2 z-depth-2 waves-effect waves-light" style="padding-left: 5px; font-family: Nunito; font-weight: 700" href="https://twitter.com/gain_gg/status/1041325219619778561" target="_blank"><img class="left" style="height: 30px; margin-top: 2px; margin: 2px 5px 0 0" src="https://files.opskins.media/file/vgo-img/item/flip-knife-marble-koi-battle-scarred-600.png"> <span class="en">KNIFE GIVEAWAY</span><span class="zh hidden">放弃</span></a></li>-->
 				{{#if user}}
 				<li><span class="navBalanceContain z-depth-2">$<span class="balance">??</span></span></li>
 				{{/if}}
