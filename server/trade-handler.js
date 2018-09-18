@@ -301,7 +301,7 @@ module.exports = {
 								});
 								cb(null, acceptedOffers, failedOffers);
 							} else {
-								cb(new Error(response.message));
+								cb(new Error(body.message));
 							}
 						}
 					});
