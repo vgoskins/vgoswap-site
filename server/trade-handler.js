@@ -122,7 +122,7 @@ module.exports = {
 		client.logOn(logOnOptions);
 	},
 	getKeysInVgoInventory: function(steamid, cb) {
-		ET.ITrade.GetUserInventoryFromSteamId({steam_id: steamid, app_id: 1, search: 'Skeleton Key'}, (err, body) => {
+		ET.ITrade.GetUserInventoryFromSteamId({steam_id: steamid, app_id: 1, search: 'WAX Key'}, (err, body) => {
 			if (err) {
 				cb(err);
 			} else {
@@ -130,7 +130,7 @@ module.exports = {
 				if (body.status == 1) {
 					let theirInvKeys = [];
 					body.response.items.forEach(function (item) {
-						if (item.name === 'Skeleton Key') {
+						if (item.category === 'WAX Key') {
 							theirInvKeys.push(item.id);
 						}
 					});
